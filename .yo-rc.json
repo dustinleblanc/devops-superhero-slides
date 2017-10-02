@@ -1,0 +1,10 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "Be a Developer Experience Superhero",
+    "packageVersion": "0.0.0",
+    "useSass": true,
+    "deployToGithubPages": true,
+    "githubUsername": "dustinleblanc",
+    "githubRepository": "devlops-superhero-slides"
+  }
+}
