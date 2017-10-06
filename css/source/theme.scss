@@ -25,7 +25,7 @@
 $backgroundColor: #181D21;
 
 $mainColor: #fff;
-$headingColor: #EECE37;
+$headingColor: #EFD01B;
 $linkColor: #e7ad52;
 
 $mainFontSize: 38px;
@@ -34,7 +34,7 @@ $mainFont: 'Lato', Helvetica, sans-serif;
 $headingFont: 'Lato', Helvetica, sans-serif;
 $headingTextShadow: 2px 2px #000;
 $headingLetterSpacing: normal;
-$headingTextTransform: uppercase;
+$headingTextTransform: none;
 $headingFontWeight: 900;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
@@ -53,16 +53,22 @@ section.has-light-background {
 @import "../../bower_components/reveal.js/css/theme/template/theme";
 // ---------------------------------------------
 
-body:after {
-	content: url(../resources/pantheon-logo-symbol.svg);
-	position: fixed;
-	bottom: 1.5em;
+.pantheon-logo {
+	position: absolute;
+	bottom: 3em;
 	left: 3em;
+    width: 100px;
 }
 
 .social {
-	position: absolute!important;
-	top: 1em;
-	right: 1em;
+	position: absolute;
+    a  {font-size: 1rem; }
+	// top: 1em;
+	right: 3em;
 	z-index: 100;
+}
+
+img.portrait{
+    height: 300px;
+    border-radius: 50%;
 }

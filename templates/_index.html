@@ -22,8 +22,7 @@
   <!-- Printing and PDF exports -->
   <script>
   var link = document.createElement( 'link' );
-  link.rel = 'stylesheet';
-  link.type = 'text/css';
+  link.rel = 'stylesheet'; link.type = 'text/css';
   link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
   document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
@@ -36,10 +35,9 @@
 <body>
 
   <div class="reveal">
-
-    <div class="social">
+    <header class="social">
       <a href="https://twitter.com/DustinLeblanc">@DustinLeblanc</a>
-    </div>
+    </header>
     <div class="slides">
 
       <% _.forEach(slides, function(slide) { %>
@@ -57,7 +55,11 @@
             </div>
 
           </div>
-
+          <footer class="pantheon-logo">
+            <a href="https://pantheon.io/">
+              <img src="resources/pantheon_logo.png" alt="" style="height: 38px;">
+            </a>
+          </footer>
           <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
           <script src="bower_components/reveal.js/js/reveal.js"></script>
           <script>
@@ -69,6 +71,9 @@
             progress: true,
             history: true,
             center: true,
+            asciinema: {
+		            className: "asciinema"
+	          },
 
             transition: 'slide', // none/fade/slide/convex/concave/zoom
 
@@ -80,8 +85,19 @@
               { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( '[data-html]' ) || !!document.querySelector( 'pre code' ) || !!document.querySelector( '[data-markdown]' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
               { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
               { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
+              {src: 'bower_components/reveal-asciinema/asciinema.js'},
               { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
-            ]
+
+            ],
+            chart: {
+              defaults: {
+                global: {
+                  legend: {
+                    display: false
+                  }
+                }
+              }
+            }
           });
 
           </script>
