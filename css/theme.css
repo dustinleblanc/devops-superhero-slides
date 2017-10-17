@@ -5,6 +5,10 @@
 */
 @import url(../bower_components/reveal.js/lib/font/source-sans-pro/source-sans-pro.css);
 @import url("https://fonts.googleapis.com/css?family=Lato");
+@font-face {
+  font-family: SourceCodeProPowerline;
+  src: url("../resources/SourceCodeProPowerline.woff"); }
+
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #222; }
 
@@ -300,6 +304,12 @@ body {
   .social a {
     font-size: 1rem; }
 
-img.portrait {
-  height: 300px;
-  border-radius: 50%; }
+.reveal pre {
+  font-family: SourceCodeProPowerline; }
+
+.reveal section img {
+  border: none;
+  background: none; }
+
+.reveal section img.portrait {
+  height: 300px; }

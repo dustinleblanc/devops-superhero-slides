@@ -21,7 +21,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-// Override theme settings (see ../../bower_components/reveal.js/css/theme/template/settings.scss)
+@font-face {
+	font-family: SourceCodeProPowerline;
+	src: url('../resources/SourceCodeProPowerline.woff');
+}
+
+// Override 'theme settings (see ../../bower_components/reveal.js/css/theme/template/settings.scss)
 $backgroundColor: #181D21;
 
 $mainColor: #fff;
@@ -68,7 +73,25 @@ section.has-light-background {
 	z-index: 100;
 }
 
-img.portrait{
-    height: 300px;
-    border-radius: 50%;
+.reveal pre {
+	font-family: SourceCodeProPowerline;
+}
+
+.reveal section img {
+	border: none;	
+	background: none;
+}
+
+.reveal section img.portrait {
+	height: 300px;	
+}
+
+.reveal pre.lando_file {
+	// width: 100%;
+	// margin: 0;
+	// code {
+	// 	padding: 0;
+	// 	max-height: 100%;
+	// 	width: 100%;
+	// }
 }

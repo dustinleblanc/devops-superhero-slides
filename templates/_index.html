@@ -14,10 +14,10 @@
   <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
 
   <link rel="stylesheet" href="css/theme.css" id="theme">
-
+  <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
 
   <!-- For syntax highlighting -->
-  <link rel="stylesheet" href="bower_components/highlightjs/styles/zenburn.css">
+  <link rel="stylesheet" href="bower_components/highlightjs/styles/solarized-dark.css">
 
   <!-- Printing and PDF exports -->
   <script>
@@ -60,47 +60,48 @@
               <img src="resources/pantheon_logo.png" alt="" style="height: 38px;">
             </a>
           </footer>
-          <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
-          <script src="bower_components/reveal.js/js/reveal.js"></script>
-          <script>
 
-          // Full list of configuration options available at:
-          // https://github.com/hakimel/reveal.js#configuration
-          Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,
-            asciinema: {
-		            className: "asciinema"
-	          },
+        </script>
 
-            transition: 'slide', // none/fade/slide/convex/concave/zoom
+        <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+        <script src="bower_components/reveal.js/js/reveal.js"></script>
 
-            // Optional reveal.js plugins
-            dependencies: [
-              { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-              { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-              { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-              { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( '[data-html]' ) || !!document.querySelector( 'pre code' ) || !!document.querySelector( '[data-markdown]' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-              { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
-              { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
-              {src: 'bower_components/reveal-asciinema/asciinema.js'},
-              { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
+        <script src="/js/asciinema-player.js"></script>
+        
+        <script>
 
-            ],
-            chart: {
-              defaults: {
-                global: {
-                  legend: {
-                    display: false
-                  }
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          controls: true,
+          progress: true,
+          history: true,
+          center: true,
+          transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+          // Optional reveal.js plugins
+          dependencies: [
+            { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( '[data-html]' ) || !!document.querySelector( 'pre code' ) || !!document.querySelector( '[data-markdown]' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+            { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
+            { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
+
+          ],
+          chart: {
+            defaults: {
+              global: {
+                legend: {
+                  display: false
                 }
               }
             }
-          });
+          }
+        });
 
-          </script>
-        </body>
+        </script>
+      </body>
 
-        </html>
+      </html>
