@@ -161,7 +161,7 @@ class RoboFile extends \Robo\Tasks {
 <section>
   <h3>Powerful Abstractions</h3>
   <pre class="php"><code>
-    **
+    /**
      * Provision the database seed for Docker.
      */
     public function dbSeed() {
@@ -179,11 +179,11 @@ class RoboFile extends \Robo\Tasks {
   <pre class="php"><code>
     public function build() {
         $this->taskNpmInstall()
-            ->dir(self::THEME_DIR)
-            ->run();
+             ->dir(self::THEME_DIR)
+             ->run();
         $this->taskBowerInstall()
-            ->dir(self::THEME_DIR)
-            ->run();
+             ->dir(self::THEME_DIR)
+             ->run();
         $this->say('Theme assets built!');
     }
   </code></pre>
@@ -250,9 +250,9 @@ class RoboFile extends \Robo\Tasks {
       	 */
       	public function lint() {
       		$this->taskExec(__DIR__ . '/vendor/bin/phpcbf')
-      			 ->rawArg('--standard=Drupal')
-      			 ->rawArg('-n web/modules/custom/* web/themes/custom/*')
-      			 ->run();
+               ->rawArg('--standard=Drupal')
+               ->rawArg('-n web/modules/custom/* web/themes/custom/*')
+               ->run();
       	}
 
         /**
